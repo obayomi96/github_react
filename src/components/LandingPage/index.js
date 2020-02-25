@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import swal from '@sweetalert/with-react';
 import './LandingPage.css';
 
 import RepoCard from '../RepoCard';
@@ -45,11 +46,18 @@ class  LandingPage extends Component {
     const { getUserProfile, getUserRepos } = this.props;
     const user = await getUserProfile(username);
     const repos = await getUserRepos(username);
-    if (user) {
+    if (user && username !== '') {
       this.setState({
         githubUser: user.payload,
         userRepos: repos.payload,
         username: '',
+      });
+    } else {
+      swal({
+        text: 'Input a valid github username',
+        icon: 'error',
+        button: true,
+        timer: 3000,
       });
     }
   }
@@ -78,7 +86,7 @@ class  LandingPage extends Component {
                 type="text"
                 name="username"
                 value={username}
-                placeholder="Search Username..."
+                placeholder="Enter a username..."
                 onChange={this.handleChange}
                 />
                 <input

@@ -1,2 +1,3 @@
 export const GET_USER_PROFILE = 'GET_USER_PROFILE';
 export const GET_USER_REPOS = 'GET_USER_REPOS';
+export const GET_REPO_README = 'GET_REPO_README';

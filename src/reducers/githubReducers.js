@@ -1,8 +1,13 @@
-import { GET_USER_PROFILE, GET_USER_REPOS } from '../actions/types';
+import {
+  GET_USER_PROFILE,
+  GET_USER_REPOS,
+  GET_REPO_README
+} from '../actions/types';
 
 export const initialState = {
   userProfile: {},
-  userRepos: []
+  userRepos: [],
+  repoReadme: {},
 }
 
 export const githubReducer = (state = initialState, action) => {
@@ -16,6 +21,11 @@ export const githubReducer = (state = initialState, action) => {
       return {
         ...state,
         userRepos: action.payload,
+      };
+    case GET_REPO_README:
+      return {
+        ...state,
+        repoReadme: {}
       }
     default:
       return state;

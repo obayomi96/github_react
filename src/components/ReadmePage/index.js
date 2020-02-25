@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import showdown from 'showdown';
 // import RepoCard from '../RepoCard';
 
 import PropTypes from 'prop-types';
@@ -25,27 +26,57 @@ class ReadmePage extends Component {
     } = this.props;
   
     const repoReadmeMD = await getRepoReadme(owner, repo)
-    console.log('btoa', typeof(repoReadmeMD.payload.content))
+    console.log('btoa', repoReadmeMD.payload.content)
     const { content } = repoReadmeMD.payload;
-    // const domparser = new DOMParser();
-    // const contents = domparser.parseFromString(atob(content), 'text/html')
 
-    // console.log('con', atob(contents))
+    console.log('coon', content)
+    const stringy = window.atob(content)
+
+    const converter = new showdown.Converter();
+    const text = stringy;
+    const html = converter.makeHtml(text)
+
+    // const showDown = 
+    console.log('hshhd', html);
+
+    // const domparser = new DOMParser();
+    // const contents = domparser.parseFromString(stringy, 'text/html');
+
+
+    // console.log('con', atob(content))
 
     return this.setState({
-      readmeContent: atob(content)
+      readmeContent: html
     })
   }
 
+  //   createMarkup = () => {
+  //   return {__html: 'First &middot; Second'};
+  // }
+  
+  //   MyComponent = () => {
+  //   return <div dangerouslySetInnerHTML={createMarkup()} />;
+  // }
+
   render() {
     const { readmeContent } = this.state;
+
+    const createMarkup = () => {
+      return {__html: readmeContent};
+    }
+    
+    //   MyComponent = () => {
+    //   return <div dangerouslySetInnerHTML={createMarkup()} />;
+    // }
+
+
     // const domparser = new DOMParser();
     // const contents = domparser.parseFromString(readmeContent, 'text/html')
     return (
       <div>
         <h2 style={{textAlign: 'center'}}>Welcome to the readme file contents</h2>
-        <div>
-          {readmeContent}
+        <div dangerouslySetInnerHTML={createMarkup()}>
+          {/* {readmeContent} */}
         </div>
       </div>
     );

@@ -25,7 +25,7 @@ export const githubReducer = (state = initialState, action) => {
     case GET_REPO_README:
       return {
         ...state,
-        repoReadme: {}
+        repoReadme: action.payload,
       }
     default:
       return state;

@@ -52,6 +52,7 @@ export const fetchRepoReadme = (owner, repo) => async (dispatch) => {
         type: GET_REPO_README,
         payload: response.data
       });
+      // console.log('resssssss', atob(response.data))
     }
   } catch (err) {
     console.log("repo err", err);

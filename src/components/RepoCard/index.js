@@ -4,13 +4,12 @@ import PropTypes from "prop-types";
 import "./RepoCard.css";
 
 const RepoCard = props => {
-  const { owner, name, onClick } = props;
+  const { name, onClick } = props;
 
   return (
     <div className="repoCard-div">
       <div className="repo-info">
-        <h3>Owner: {owner}</h3>
-        <h3>Repo: {name}</h3>
+        <h3>Repository: {name}</h3>
         <div>
           <button className="view-btn" onClick={onClick}>View readme</button>
         </div>

@@ -107,7 +107,7 @@ class  LandingPage extends Component {
                 <div className="image-div">
                 <img className="owner-img" src={githubUser.avatar_url} alt="User avatar" />
                 </div>
-                <h3 style={{color: 'gray'}}>{githubUser.name}</h3> <br/>
+                <h3 style={{color: 'gray'}} className="owner-name">{githubUser.name}</h3> <br/>
               </div>
                 <h3 style={{color: 'gray'}}>REPOSITORIES</h3>
               <div className="repos-div">

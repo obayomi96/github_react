@@ -37,7 +37,7 @@ class  LandingPage extends Component {
   }
 
   handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [event.target.name]: event.target.value.trim() });
   }
 
   handleSubmit = async (event) => {

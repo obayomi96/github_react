@@ -5,7 +5,6 @@ import "./RepoCard.css";
 
 const RepoCard = props => {
   const { owner, name, onClick } = props;
-  console.log("owner", owner);
 
   return (
     <div className="repoCard-div">

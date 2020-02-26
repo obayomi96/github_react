@@ -4,3 +4,8 @@
 * Search github user with username
 * View github user's repositories
 * View a repository's README.md file
+
+## Run
+* Clone the repository
+* Install dependencies ```npm install```
+* Run the app on localhost ```npm start```

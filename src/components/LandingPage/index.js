@@ -78,7 +78,6 @@ class  LandingPage extends Component {
       return (
         <RepoCard
           key={repo.id}
-          owner={repo.owner.login}
           name={repo.name}
           onClick={() => this.viewReadme(repo.owner.login, repo.name)}
         />
@@ -123,7 +122,7 @@ class  LandingPage extends Component {
                 <div className="image-div">
                   <img className="owner-img" src={githubUser.avatar_url} alt="User avatar" />
                 </div>
-                <h3 style={{color: 'gray'}} className="owner-name">{githubUser.name}</h3> <br/>
+                <h3 style={{color: 'gray'}} className="owner-name">{githubUser.name}</h3>
               </div>
                 <h3 style={{color: 'gray'}}>REPOSITORIES</h3>
               <div className="repos-div">

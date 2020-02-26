@@ -43,22 +43,28 @@
    inset 1px 1px 3px 1px #C4C4C4;
 }
 
+.owner-div {
+  flex-direction: column;
+}
+
 .image-div  {
-	display: flex;
+  display: flex;
+  flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 125px;
-	width: 125px;
+	height: 120px;
+	width: 120px;
 	background: #dde1e7;
 	border-radius: 50%;
 	box-shadow: -3px -3px 7px #ffffffa6, 3px 3px 5px rgba(94, 104, 121, 0.712);
-	position: relative;
+  position: relative;
+  margin: 1em 0;
 }
 .image-div:after {
 	content: '';
 	position: absolute;
-	height: 80%;
-	width: 80%;
+	height: 90%;
+	width: 90%;
 	background-color: transparent;
 	border-radius: 50%;
 	box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.671);
@@ -102,5 +108,22 @@ form {
 @media only screen and (max-width: 768px) {
   .search-bar::placeholder {
     font-size: 10px;
+  }
+  .search-div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .search-bar {
+    padding: .6em 1em;
+    border-radius: 2px;
+    width: auto;
+    margin:  0;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
   }
 }

@@ -80,9 +80,10 @@ class  LandingPage extends Component {
     return (
       <div>
         <header className="App-header">
-          <div>
+          <div className="search-div">
             <form onSubmit={this.handleSubmit}>
               <input
+                className="search-bar"
                 type="text"
                 name="username"
                 value={username}
@@ -90,6 +91,7 @@ class  LandingPage extends Component {
                 onChange={this.handleChange}
                 />
                 <input
+                  className="submit-btn"
                   type="submit"
                   name="submit"
                   onSubmit={this.handleSubmit}
@@ -99,14 +101,16 @@ class  LandingPage extends Component {
         </header>
           {
             githubUser.name ? 
-            <div>
-              <div className="github-user">
-                <img src={githubUser.avatar_url} height="60px" width="60px" alt="User avatar" />
-                <h3>Full Name: {githubUser.name}</h3> <br/>
-                <div>
-                  repositories <br/>
-                  {repositories}
+            <div className="github-user">
+              <div className="owner-div">
+                <div className="image-div">
+                <img className="owner-img" src={githubUser.avatar_url} alt="User avatar" />
                 </div>
+                <h3 className="owner-name">{githubUser.name}</h3> <br/>
+              </div>
+                <h3>REPOSITORIES</h3>
+              <div className="repos-div">
+                {repositories}
               </div>
             </div> : ''
           }

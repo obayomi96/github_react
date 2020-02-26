@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import showdown from 'showdown';
 
+import './ReadmePage.css';
+
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchRepoReadme } from '../../actions/githubActions';
@@ -45,14 +47,14 @@ class ReadmePage extends Component {
     }
     
     return (
-      <div>
-        <div>
-          <Link to="/">
+      <div className="readmePage-div">
+        <div className="readmePage-header">
+          <Link className="back-btn" to="/">
            <h3>back</h3>
           </Link>
-         <h2 style={{textAlign: 'center'}}>Welcome to the readme file contents</h2>
+         <h2 className="readmePage-h2" >Welcome to the readme file contents</h2>
         </div>
-        <div dangerouslySetInnerHTML={createMarkup()}></div>
+        <div className="readmeContent" dangerouslySetInnerHTML={createMarkup()}></div>
       </div>
     );
   }

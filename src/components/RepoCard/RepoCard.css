@@ -1,7 +1,17 @@
 .repoCard-div {
-  background-color: #ddd;
+  /* background: rgb(156, 152, 152); */
   color: grey;
   height: inherit;
-  width: 300px;
   margin: auto;
+  width: 50%;
+  padding: 1em;
+  text-align: left;
+}
+
+.repo-info {
+  margin: 1em auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
 }

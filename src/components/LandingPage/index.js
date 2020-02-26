@@ -31,6 +31,14 @@ class  LandingPage extends Component {
     })
   }
 
+  resetState = () => {
+    this.setState({
+      githubUser: {},
+      userRepos: [],
+      repoReadmeFile: {}
+    })
+  }
+
   viewReadme = (owner, repo) => {
     const { history } = this.props;
     history.push(`readme/${owner}/${repo}`)
@@ -54,7 +62,7 @@ class  LandingPage extends Component {
       });
     } else {
       swal({
-        text: 'Input a valid github username',
+        text: 'Please enter a valid github username',
         icon: 'error',
         button: true,
         timer: 3000,
@@ -80,7 +88,15 @@ class  LandingPage extends Component {
     return (
       <div>
         <header className="App-header">
-        <h3 style={{color: 'gray'}}>Github repo finder</h3>
+        <h3
+          style={{
+            color: 'gray',
+            cursor: 'pointer',
+          }}
+          onClick={this.resetState}
+        >
+          Github repo finder
+        </h3>
           <div className="search-div">
             <form onSubmit={this.handleSubmit}>
               <input

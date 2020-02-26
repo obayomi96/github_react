@@ -43,6 +43,27 @@
    inset 1px 1px 3px 1px #C4C4C4;
 }
 
+.image-div  {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 125px;
+	width: 125px;
+	background: #dde1e7;
+	border-radius: 50%;
+	box-shadow: -3px -3px 7px #ffffffa6, 3px 3px 5px rgba(94, 104, 121, 0.712);
+	position: relative;
+}
+.image-div:after {
+	content: '';
+	position: absolute;
+	height: 80%;
+	width: 80%;
+	background-color: transparent;
+	border-radius: 50%;
+	box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.671);
+}
+
 form {
   width: 100%;
 }

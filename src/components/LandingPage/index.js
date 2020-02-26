@@ -80,6 +80,7 @@ class  LandingPage extends Component {
     return (
       <div>
         <header className="App-header">
+        <h3>Github repo finder</h3>
           <div className="search-div">
             <form onSubmit={this.handleSubmit}>
               <input
@@ -87,7 +88,7 @@ class  LandingPage extends Component {
                 type="text"
                 name="username"
                 value={username}
-                placeholder="Enter a username..."
+                placeholder="Search for a github user by entering a username..."
                 onChange={this.handleChange}
                 />
                 <input

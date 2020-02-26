@@ -28,10 +28,13 @@
   border-radius: 4px;
   cursor: pointer;
   padding: .6em;
-  width: 100%
+  width: 100%;
+  font-weight: 800;
+  color: gray;
 } 
 .view-btn:hover {
   opacity: 0.8;
+  color: rgb(51, 48, 48);
 }
 
 @media only screen and (max-width: 768px) {

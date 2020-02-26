@@ -80,7 +80,7 @@ class  LandingPage extends Component {
     return (
       <div>
         <header className="App-header">
-        <h3>Github repo finder</h3>
+        <h3 style={{color: 'gray'}}>Github repo finder</h3>
           <div className="search-div">
             <form onSubmit={this.handleSubmit}>
               <input
@@ -107,9 +107,9 @@ class  LandingPage extends Component {
                 <div className="image-div">
                 <img className="owner-img" src={githubUser.avatar_url} alt="User avatar" />
                 </div>
-                <h3 className="owner-name">{githubUser.name}</h3> <br/>
+                <h3 style={{color: 'gray'}}>{githubUser.name}</h3> <br/>
               </div>
-                <h3>REPOSITORIES</h3>
+                <h3 style={{color: 'gray'}}>REPOSITORIES</h3>
               <div className="repos-div">
                 {repositories}
               </div>

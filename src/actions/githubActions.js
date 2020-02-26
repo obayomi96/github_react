@@ -1,4 +1,5 @@
 import axios from "axios";
+import swal from '@sweetalert/with-react';
 
 import {
   GET_USER_PROFILE,

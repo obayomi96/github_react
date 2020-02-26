@@ -13,4 +13,38 @@
   display: flex;
   flex-direction: column;
   line-height: 30px;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow:
+   -2px -2px 6px 2px #FFF,
+   2px 2px 6px 2px #C4C4C4;
+}
+
+.view-btn {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: .6em;
+  width: 100%
+} 
+.view-btn:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+  .repoCard-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .view-btn {
+    width: 100%;
+    padding: .5em 2em;
+  }
+  .repo-info {
+    width: 100%;
+  }
 }

@@ -11,7 +11,9 @@ const RepoCard = props => {
       <div className="repo-info">
         <h3>Owner: {owner}</h3>
         <h3>Repo: {name}</h3>
-        <button onClick={onClick}>View readme</button>
+        <div>
+          <button className="view-btn" onClick={onClick}>View readme</button>
+        </div>
       </div>
     </div>
   );

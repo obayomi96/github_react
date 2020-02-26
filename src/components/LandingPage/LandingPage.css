@@ -58,11 +58,9 @@ form {
   box-shadow: 
     -4px -4px 13px 4px #FFF,
     4px 4px 13px 4px #C4C4C4;
-}
+  }
 
 .submit-btn:hover {
-  /* opacity: 0.7;
-  cursor: pointer; */
   box-shadow:
   -3px -3px 8px 3px #FFF,
   3px 3px 8px 3px #C4C4C4;
@@ -78,4 +76,11 @@ form {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-bar::placeholder {
+    font-size: 10px;
+  }
+  
 }

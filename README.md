@@ -12,4 +12,4 @@
 
 ## Deployment
 * The app is deployed on Netlify
-* Deployment link https://leadiq-challenege.netlify.com/
+* Deployment link https://leadiq-challenge.netlify.com/

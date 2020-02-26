@@ -9,3 +9,7 @@
 * Clone the repository
 * Install dependencies ```npm install```
 * Run the app on localhost ```npm start```
+
+## Deployment
+* The app is deployed on Netlify
+* Deployment link https://leadiq-challenege.netlify.com/

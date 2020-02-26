@@ -28,7 +28,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-
   .repoCard-div {
     display: flex;
     flex-wrap: wrap;
@@ -37,5 +36,8 @@
   .view-btn {
     width: 100%;
     padding: .5em 2em;
+  }
+  .repo-info {
+    width: 100%;
   }
 }

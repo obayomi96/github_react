@@ -9,7 +9,7 @@ const RepoCard = props => {
   return (
     <div className="repoCard-div">
       <div className="repo-info">
-        <h3>Repository: {name}</h3>
+        <h3>{name}</h3>
         <div>
           <button className="view-btn" onClick={onClick}>View readme</button>
         </div>

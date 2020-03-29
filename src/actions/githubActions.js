@@ -6,10 +6,14 @@ import {
   GET_REPO_README,
 } from "./types";
 
+const API_URL = 'https://api.github.com';
+const client_id = '57cd7f12ba532256fd43';
+const client_secret = '149e945a07ea5c17e72f62129cbb07284055242c';
+
 export const fetchUserProfile = (username) => async (dispatch) => {
   try {
     const response = await axios.get(
-      `https://api.github.com/users/${username}?client_id=57cd7f12ba532256fd43&client_secret=149e945a07ea5c17e72f62129cbb07284055242c`
+      `${API_URL}/users/${username}?client_id=${client_id}&client_secret=${client_secret}`
     );
     if (response.status = 200) {
       return dispatch({
@@ -25,7 +29,7 @@ export const fetchUserProfile = (username) => async (dispatch) => {
 export const fetchUserRepos = (username) => async (dispatch) => {
   try {
     const response = await axios.get(
-      `https://api.github.com/users/${username}/repos?client_id=57cd7f12ba532256fd43&client_secret=149e945a07ea5c17e72f62129cbb07284055242c`
+      `${API_URL}/users/${username}/repos?client_id=${client_id}&client_secret=${client_secret}`
     );
     if (response.status === 200) {
       return dispatch({
@@ -42,7 +46,7 @@ export const fetchRepoReadme = (owner, repo) => async (dispatch) => {
   try {
     const path = 'README.md';
     const response = await axios.get(
-      `https://api.github.com/repos/${owner}/${repo}/contents/${path}?client_id=57cd7f12ba532256fd43&client_secret=149e945a07ea5c17e72f62129cbb07284055242c`
+      `${API_URL}/repos/${owner}/${repo}/contents/${path}?client_id=${client_id}&client_secret=${client_secret}`
     );
     if (response.status === 200) {
       return dispatch({

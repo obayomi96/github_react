@@ -19,7 +19,6 @@ const RepoCard = props => {
 };
 
 RepoCard.propTypes = {
-  owner: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   onClick: PropTypes.func
 };

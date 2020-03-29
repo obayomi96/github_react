@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import swal from '@sweetalert/with-react';
+import PropTypes from 'prop-types';
+import Swal from 'sweetalert2';
 import './LandingPage.css';
 
 import RepoCard from '../RepoCard';
 
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   fetchUserProfile,
@@ -61,11 +61,13 @@ class  LandingPage extends Component {
         username: '',
       });
     } else {
-      swal({
-        text: 'Please enter a valid github username',
+      Swal.fire({
+        position: 'top-end',
         icon: 'error',
-        button: true,
-        timer: 3000,
+        text: 'Please enter a valid github username',
+        showConfirmButton: false,
+        timer: 2000,
+        toast: true
       });
     }
   }

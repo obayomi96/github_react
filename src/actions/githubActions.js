@@ -6,11 +6,9 @@ import {
   GET_REPO_README,
 } from "./types";
 
-const API_URL = process.env.API_URL;
-const client_id = process.env.client_id;
-const client_secret = process.env.client_secret;
-
-console.log('sss', client_id);
+const API_URL = process.env.REACT_APP_API_URL;
+const client_id = process.env.REACT_APP_CLIENT_ID;
+const client_secret = process.env.REACT_APP_CLIENT_SECRET;
 
 export const fetchUserProfile = (username) => async (dispatch) => {
   try {

@@ -138,9 +138,9 @@ class  LandingPage extends Component {
 }
 
 LandingPage.propTypes = {
-  user: PropTypes.shape(),
-  repos: PropTypes.shape(),
-  readMe: PropTypes.shape(),
+  user: PropTypes.object,
+  repos: PropTypes.array,
+  readMe: PropTypes.object,
   getUserProfile: PropTypes.func,
   getUserRepos: PropTypes.func,
   getRepoReadme: PropTypes.func,

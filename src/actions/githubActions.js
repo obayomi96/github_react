@@ -6,16 +6,18 @@ import {
   GET_REPO_README,
 } from "./types";
 
-const API_URL = 'https://api.github.com';
-const client_id = '57cd7f12ba532256fd43';
-const client_secret = '149e945a07ea5c17e72f62129cbb07284055242c';
+const API_URL = process.env.API_URL;
+const client_id = process.env.client_id;
+const client_secret = process.env.client_secret;
+
+console.log('sss', client_id);
 
 export const fetchUserProfile = (username) => async (dispatch) => {
   try {
     const response = await axios.get(
       `${API_URL}/users/${username}?client_id=${client_id}&client_secret=${client_secret}`
     );
-    if (response.status = 200) {
+    if (response.status === 200) {
       return dispatch({
         type: GET_USER_PROFILE,
         payload: response.data

@@ -22,7 +22,7 @@ export const fetchUserProfile = (username) => async (dispatch) => {
       });
     }
   } catch (err) {
-    console.log("err", err);
+    if (err) throw err;
   }
 };
 
@@ -38,7 +38,7 @@ export const fetchUserRepos = (username) => async (dispatch) => {
       });
     }
   } catch (err) {
-    console.log("err", err);
+    if (err) throw err;
   }
 };
 
@@ -55,6 +55,6 @@ export const fetchRepoReadme = (owner, repo) => async (dispatch) => {
       });
     }
   } catch (err) {
-    console.log("err", err);
+    if (err) throw err;
   }
 };

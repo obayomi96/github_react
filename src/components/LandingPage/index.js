@@ -96,7 +96,7 @@ class  LandingPage extends Component {
           }}
           onClick={this.resetState}
         >
-          Github repo finder
+          Github finder
         </h3>
           <div className="search-div">
             <form onSubmit={this.handleSubmit}>

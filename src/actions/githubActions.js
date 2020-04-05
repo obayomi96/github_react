@@ -29,7 +29,7 @@ export const fetchUserProfile = (username) => async (dispatch) => {
 export const fetchUserRepos = (username) => async (dispatch) => {
   try {
     const response = await axios.get(
-      `${API_URL}/users/${username}/repos?per_page=100?client_id=${client_id}&client_secret=${client_secret}`
+      `${API_URL}/users/${username}/repos?per_page=100&client_id=${client_id}&client_secret=${client_secret}`
     );
     if (response.status === 200) {
       return dispatch({
